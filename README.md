@@ -6,8 +6,12 @@ This project demonstrates how to successfully create docker images for a react a
 To start the network:
 1. Clone this repository
 2. Make sure you have a Docker Daemon running, then run this command at the root folder of the repository:
-  sudo docker-compose up -d
+````
+sudo docker-compose up -d
+````
 3. To view the React App, open localhost:3000 on your browser.
 4. To stop the network, run this command:
-    sudo docker-compose down 
+````
+sudo docker-compose down 
+````
   
