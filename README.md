@@ -9,5 +9,5 @@ To start the network:
   sudo docker-compose up -d
 3. To view the React App, open localhost:3000 on your browser.
 4. To stop the network, run this command:
-    sudon docker-compose down 
+    sudo docker-compose down 
   
