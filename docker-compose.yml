@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  front-end:
+    build: ./front-end
+    ports:
+      - "3000:3000"
+    depends_on:
+      - back-end
+    container_name: front-end
+  
+  back-end:
+    build: ./back-end
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongodb
+    environment: 
+      MONGO_URI: mongodb://mongodb:27017
+    container_name: back-end
+
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+    container_name: mongodb
+    volumes:
+      - dbdata:/var/lib/mongodb
+
+volumes:
+  dbdata:
